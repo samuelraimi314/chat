@@ -1,0 +1,57 @@
+.intro-container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-size: cover;
+  background-position: center;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: white;
+  text-align: center;
+}
+
+.intro-content {
+  backdrop-filter: blur(3px);
+}
+
+.logo {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 2rem;
+}
+
+.circle-box {
+  width: 180px;
+  height: 180px;
+  border: 6px solid #1eabff;
+  border-radius: 50%;
+  margin: 0 auto 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #1eabff;
+}
+
+.version {
+  color: #ccc;
+  font-size: 0.9rem;
+}
+
+.get-started-button {
+  margin-top: 20px;
+  padding: 12px 24px;
+  background-color: #00aaff;
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 20px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.get-started-button:hover {
+  background-color: #008fcc;
+}

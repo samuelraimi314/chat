@@ -1,0 +1,133 @@
+/* src/components/Chat.css */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f2f5;
+    display: flex; /* For centering the chat container */
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.chat-container {
+    width: 100%;
+    max-width: 700px; /* Slightly wider for group chat */
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    height: 85vh; /* Adjust height as needed */
+}
+
+.chat-header {
+    background-color: #007bff;
+    color: white;
+    padding: 15px;
+    text-align: center;
+    font-size: 1.2em;
+    border-bottom: 1px solid #0056b3;
+    display: flex; /* To align title and select */
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+}
+
+.chat-header h3 {
+    margin: 0;
+    flex-grow: 1; /* Allow h3 to take space */
+}
+
+.sender-select {
+    padding: 8px 12px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    background-color: white;
+    color: #333;
+    cursor: pointer;
+}
+
+.chat-messages {
+    flex-grow: 1;
+    padding: 15px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background-color: #e5ddd5;
+}
+
+.message {
+    max-width: 70%;
+    padding: 10px 15px;
+    border-radius: 18px;
+    word-wrap: break-word;
+    font-size: 0.95em;
+    line-height: 1.4;
+    box-shadow: 0 1px 0.5px rgba(0, 0, 0, 0.13);
+}
+
+.sender-name {
+    font-weight: bold;
+    margin-right: 5px;
+    /* You can add specific colors per user if you want, e.g., using a class for each senderId */
+}
+
+/* Styles for messages sent by the active user */
+.message.user-self {
+    align-self: flex-end;
+    background-color: #dcf8c6; /* Green for your own messages */
+    color: #333;
+    border-bottom-right-radius: 2px;
+}
+
+/* Styles for messages from other simulated users */
+.message.other-user {
+    align-self: flex-start;
+    background-color: #ffffff; /* White for other users' messages */
+    color: #333;
+    border-bottom-left-radius: 2px;
+}
+
+/* Styles for bot messages (e.g., initial welcome) */
+.message.bot {
+    align-self: center; /* Center bot messages */
+    background-color: #e0f2f7; /* Light blue for bot */
+    color: #555;
+    border-radius: 10px; /* Slightly different border for bot */
+    max-width: 80%; /* Wider for bot messages */
+    text-align: center;
+}
+
+.chat-input-area {
+    display: flex;
+    padding: 15px;
+    border-top: 1px solid #ddd;
+    background-color: #f0f2f5;
+}
+
+.chat-input-area input {
+    flex-grow: 1;
+    padding: 10px 15px;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    margin-right: 10px;
+    font-size: 1em;
+}
+
+.chat-input-area button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s ease;
+}
+
+.chat-input-area button:hover {
+    background-color: #0056b3;
+}
